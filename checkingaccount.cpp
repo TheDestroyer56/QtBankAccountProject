@@ -2,7 +2,7 @@
 
 CheckingAccount::CheckingAccount()
 {
-    checkingBalance = 0;
+    checkingBalance = 0; // maybe set both of this outside like local variable to this or maybe not, unsure about it but probaly like this.
     amount = 0;
 }
 
@@ -21,6 +21,7 @@ void CheckingAccount::setWithdraw(double amount)
 {
     this->amount = amount;
     checkingBalance = checkingBalance - amount;
+    checkingBalance-withgrawalFee = checkingBalance // probably set this up wrong but you forogt the fee for this when withdrawaling
 }
 
 double CheckingAccount::getWithdraw()
@@ -34,5 +35,5 @@ double CheckingAccount::getCheckingBalance()
 }
 CheckingAccount::~CheckingAccount()
 {
-
+//idk what this is for
 }
