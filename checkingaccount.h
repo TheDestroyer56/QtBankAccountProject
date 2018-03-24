@@ -7,6 +7,7 @@ class CheckingAccount
 private:
     double checkingBalance;
     double amount;
+    double withdrawal fee;
 public:
     CheckingAccount();
     void setDeposit(double amount);
