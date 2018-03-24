@@ -4,6 +4,7 @@ CheckingAccount::CheckingAccount()
 {
     checkingBalance = 0;
     amount = 0;
+    withdrawalFee; // this is needed i believe;
 }
 
 void CheckingAccount::setDeposit(double amount)
