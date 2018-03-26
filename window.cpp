@@ -69,6 +69,16 @@ void Window::savingsButtonWindow()
     // Creating the new window
   QWidget * savingsWindow = new QWidget;
   savingsWindow->setFixedSize(1000,500);
+    
+  accountNumberLabel = new QLabel(this);
+  accountNumberLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+  accountNumberLabel->setText("Account Number:");
+  accountNumberLabel->setGeometry(375,100,100,30); 
+    
+  accountNumberDisplay = new QLabel(this);
+  accountNumberDisplay->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+  accountNumberDisplay->setText(QString::number(user.getCheckingAccountNumber()));
+  accountNumberDisplay->setGeometry(480,100,100,30);
 
   balanceLabel = new QLabel(savingsWindow);
   balanceLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
@@ -99,6 +109,31 @@ void Window::checkingsButtonWindow()
     // Creating the new window
   QWidget * checkingsWindow = new QWidget;
   checkingsWindow->setFixedSize(1000,500);
+    
+    
+  accountNumberLabel = new QLabel(this);
+  accountNumberLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+  accountNumberLabel->setText("Account Number:");
+  accountNumberLabel->setGeometry(375,100,100,30); 
+    
+  accountNumberDisplay = new QLabel(this);
+  accountNumberDisplay->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+  accountNumberDisplay->setText(QString::number(user.getCheckingAccountNumber()));
+  accountNumberDisplay->setGeometry(480,100,100,30);
+    
+   
+  balanceLabel = new QLabel(checkingsWindow);
+  balanceLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+  balanceLabel->setText("Balance:");
+  balanceLabel->setGeometry(375,130,100,30);
+
+
+  balanceDisplay = new QLabel(checkingsWindow);
+  balanceDisplay->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+  balanceDisplay->setText("$$$");
+  balanceDisplay->setGeometry(490,130,100,30);
+    
+    
 
   okButton = new QPushButton("OK", checkingsWindow);
   okButton->setGeometry(450,400,60,30);
