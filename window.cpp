@@ -139,6 +139,14 @@ void Window::depositSavingsButtonWindow()
     // Creating the new window
   QWidget * depositSavingsWindow = new QWidget;
   depositSavingsWindow->setFixedSize(1000,500);
+    
+   depositMessageLabel = new QLabel(depositSavingsWindow);
+  depositMessageLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+  depositMessageLabel->setText("Enter the amount you wish to deposit");
+  depositMessageLabel->setGeometry(350,150,270,30);
+
+   QLineEdit * amount = new QLineEdit;
+    
 
   okButton = new QPushButton("OK", depositSavingsWindow);
   okButton->setGeometry(450,400,60,30);
@@ -152,6 +160,14 @@ void Window::depositCheckingsButtonWindow()
     QWidget * depositCheckingsWindow = new QWidget;
     depositCheckingsWindow->setFixedSize(1000,500);
 
+  depositMessageLabel = new QLabel(depositSavingsWindow);
+  depositMessageLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+  depositMessageLabel->setText("Enter the amount you wish to deposit");
+  depositMessageLabel->setGeometry(350,150,270,30);
+
+   QLineEdit * amount = new QLineEdit;
+    
+    
     okButton = new QPushButton("OK", depositCheckingsWindow);
     okButton->setGeometry(450,400,60,30);
     connect(okButton, SIGNAL (pressed()), depositCheckingsWindow, SLOT (close()));
@@ -188,6 +204,13 @@ void Window::withdrawCheckingsButtonWindow()
 {
     QWidget * withdrawCheckingsWindow = new QWidget;
     withdrawCheckingsWindow->setFixedSize(1000,500);
+    
+    withdrawMessageLabel = new QLabel(withdrawCheckingsWindow);
+    withdrawMessageLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+    withdrawMessageLabel->setText("Enter the amount you wish to withdrawal from");
+    withdrawMessageLabel->setGeometry(350,150,270,30);
+    
+    QLineEdit * amount = new QLineEdit;
 
     okButton = new QPushButton("OK", withdrawCheckingsWindow);
     okButton->setGeometry(450,400,60,30);
@@ -200,6 +223,13 @@ void Window::withdrawSavingsButtonWindow()
 {
     QWidget * withdrawSavingsWindow = new QWidget;
     withdrawSavingsWindow->setFixedSize(1000,500);
+    
+       withdrawMessageLabel = new QLabel(withdrawSavingsWindow);
+    withdrawMessageLabel->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+    withdrawMessageLabel->setText("Enter the amount you wish to withdrawal from");
+    withdrawMessageLabel->setGeometry(350,150,270,30);
+    
+    QLineEdit * amount = new QLineEdit;
 
     okButton = new QPushButton("OK", withdrawSavingsWindow);
     okButton->setGeometry(450,400,60,30);
