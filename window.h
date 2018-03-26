@@ -40,6 +40,9 @@ private:
     QLabel * userNameDisplay;
     QLabel * userNameLabel;
     QLabel * withdrawMessageLabel;
+    
+    // Amount
+    QLineEdit * amount;
 
     User user;
 
