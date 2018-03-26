@@ -4,6 +4,7 @@
 #include <QApplication>
 #include <QMainWindow>
 #include <QPUshButton>
+#include <QLineEdit>
 #include <QLabel>
 #include <QString>
 #include "user.h"
