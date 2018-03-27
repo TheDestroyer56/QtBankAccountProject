@@ -20,7 +20,7 @@ double CheckingAccount::getDeposit()
 void CheckingAccount::setWithdraw(double amount)
 {
     this->amount = amount;
-    checkingBalance = checkingBalance - amount;
+    checkingBalance = checkingBalance - amount-withdrawalFee;
 }
 
 double CheckingAccount::getWithdraw()
