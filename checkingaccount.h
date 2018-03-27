@@ -9,6 +9,7 @@ private:
     double checkingBalance;
     double amount;
     QVector<double> checkingsTransaction;
+    double withdrawalFee = 10;
 public:
     CheckingAccount();
     void setDeposit(double amount);
